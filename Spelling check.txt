@@ -1,0 +1,27 @@
+
+Sub handlingspelledword()
+
+Dim myrange As Range
+
+For Each myrange In ActiveSheet.UsedRange
+
+    If Not Application.CheckSpelling(word:=myrange.Text) Then
+
+        
+
+        myrange.Style = " Good"
+
+        
+
+    End If
+
+ Next myrange
+
+End Sub
+
+
+
+
+
+
+

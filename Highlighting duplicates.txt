@@ -1,0 +1,25 @@
+Sub highlightingDuplicateValues()
+
+Dim myRange As Range
+
+Dim myCell As Range
+
+ 
+
+Set myRange = Selection
+
+For Each myCell In myRange
+
+    If WorksheetFunction.CountIf(myRange, myCell.Value) > 1 Then
+
+        myCell.EntireRow.Cells(1, 1).Interior.ColorIndex = 40
+
+        
+
+    End If
+
+Next myCell
+
+ 
+
+End Sub
